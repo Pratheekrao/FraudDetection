@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-jr1zc4#3w2+c&^gtxwr)v8&vpr)!(ng4qi(k%111mg_%rywiko
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["fraud-detection-clw5prfs9-pratheekraos-projects.vercel.app",
+                 "127.0.0.1",  # For local development
+                "localhost",]
 
 
 # Application definition
@@ -50,13 +52,14 @@ INSTALLED_APPS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'supplychain',
-        'USER': 'root',
-        'PASSWORD': '75321',
-        'HOST': 'localhost',
+        'NAME': 'eCommerce',
+        'USER': 'admin',
+        'PASSWORD': 'RaviNihar123',
+        'HOST': 'e-commerce-supplychain.csd8i4gaguix.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -135,7 +138,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'None'
+STATIC_ROOT = None
+STATICFILES_DIRS = []
+STATICFILES_STORAGE = None
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

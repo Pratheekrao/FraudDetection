@@ -4,7 +4,7 @@ from review.models import BuyerDetails
 from gradio_client import Client
 
 # Initialize Gradio Client
-client = Client("NiharMandahas/Customer_fraud_EL",verbose=True)
+client = Client("NiharMandahas/KNN_Fraud",verbose=True)
 
 @csrf_exempt
 def buyer_fraud_prediction(request):
