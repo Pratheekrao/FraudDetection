@@ -131,12 +131,8 @@ def predict_seller_score(request):
     
 
 def process_values_with_groq(values, prompt):
-    api_key = os.getenv("GROQ_API_KEY")
-    if not api_key:
-        raise ValueError("GROQ_API_KEY environment variable is not set.")
-
-    client = Groq(api_key=api_key)
-
+    key = "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"
+    client = Groq(api_key=key)
     
     # Handle dictionary input
     if isinstance(values, dict):
